@@ -2,8 +2,8 @@ export class Employee {
     _id!: string;
     name!: string;
    
-    email!: String ;
+    email!: Array<string>;
     address!:  String ;
-    phonenumber!: String ;
+    phonenumber!: Array<string> ;
     message!: String;
 }

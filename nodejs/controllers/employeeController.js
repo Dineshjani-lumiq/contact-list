@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
     console.log("fromsercer")
     var emp = new Employee({
         name: req.body.name,
-        mail: req.body.mail,
+        email: req.body.email,
         address: req.body.address,
         phonenumber: req.body.phonenumber,
         message:req.body.message

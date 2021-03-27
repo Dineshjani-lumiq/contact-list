@@ -1,0 +1,35 @@
+
+
+                <mat-table [dataSource]="dataSource">
+  <!-- User name Definition -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> User name </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+  </ng-container>
+ <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> email</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+  </ng-container>
+  <!-- Age Definition -->
+   <ng-container matColumnDef="message">
+    <mat-header-cell *matHeaderCellDef> message</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.message}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="address">
+    <mat-header-cell *matHeaderCellDef> Address</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.address}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="phonenumber">
+    <mat-header-cell *matHeaderCellDef> phonenumber</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.phonenumber}} </mat-cell>
+  </ng-container>
+
+  <!-- Title Definition -->
+ 
+
+  <!-- Header and Row Declarations -->
+   <mat-header-row *matHeaderRowDef="['name', 'email','message','address','phonenumber']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['name', 'email','message','address','phonenumber']"></mat-row>
+ 
+</mat-table>
+

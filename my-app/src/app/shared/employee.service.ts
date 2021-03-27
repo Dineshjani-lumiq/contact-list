@@ -11,9 +11,9 @@ export class EmployeeService {
   selectedEmployee: Employee={
     _id: '',
     name: '',
-    email:'',
+    email:[''],
     address:'',
-    phonenumber:'',
+    phonenumber:[''],
     message:''
   };
   employees?: Employee[];
@@ -30,6 +30,7 @@ export class EmployeeService {
     
   }
   getEmployeeList() {
+
     return this.http.get(this.baseURL);
   }
 

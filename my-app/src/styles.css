@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
+@import  url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+    background: #456;
+    font-family: 'Open Sans', sans-serif;
+}
 form div.input-field input{
     padding-left: 15px !important;
     color: #25a297;
@@ -53,12 +59,13 @@ a.action-btn:hover{
   }
   .container{
       align-self: center;
-      margin: 80px;
-      margin-top: 130px;
+      
   }
   .head{
       text-decoration: solid;
+      font-weight: bold;
       text-align: center;
+      
   }
 .error{
     color: red;
@@ -67,4 +74,26 @@ a.action-btn:hover{
 .success{
     color: green;
     font-size: 20px;
-} 
+}
+
+.has-error input[type="email"],
+.has-error input[type="password"] {
+    border-color: rgb(216, 12, 12);
+    color: rgb(230, 14, 14);
+}
+button{
+    background: rgb(1, 29, 51);
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.check{
+    align-content: center;
+}
+.margin{
+    width: 225px;
+    text-size-adjust: 0.58;
+    height: 25px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

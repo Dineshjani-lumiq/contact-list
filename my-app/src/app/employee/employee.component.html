@@ -107,7 +107,7 @@
 <div> 
 <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
   <div>
-	Name: <input class="margin" formControlName="name"  placeholder="Enter Name">
+	 <input mdbInput class="margin" formControlName="name"  placeholder="Enter Name">
 <div *ngIf="userName.dirty && userName.errors" class="error">
 					<div *ngIf="userName.errors.required">
 						Full name required.
@@ -121,32 +121,39 @@
 </div> 
 
   </div>
-  <div> 
-	email: <input class="margin" formControlName="email"  placeholder="Enter Email">
-	<label *ngIf="userForm.get('email')?.invalid" [ngClass] = "'error'"> email is required. </label>
-  </div>
+   <br/>
+   
   
+<div formArrayName="skills">
+	<div *ngFor="let skills of skills.controls; index as idx">
+	 <input mdbInput class="margin" [formControlName]="idx" placeholder="Enter Email addres">
+    
+	 
+	</div>
+  </div>
+
+ 
+   <br/>
 	  <div>
-		Address: <input class="margin" formControlName="address"  placeholder="Enter Home address ">
+		 <input mdbInput class="margin" formControlName="address"  placeholder="Enter Home address ">
 	
 	  </div>  
+     <br/>
+    
 	 <div>
-	  Message: <input class="margin" formControlName="message"  placeholder="Enter Message ">
+	 <input mdbInput class="margin" formControlName="message"  placeholder="Enter Message ">
 		<label *ngIf="userForm.get('message')?.invalid" [ngClass] = "'error'">  </label>
 	  
   </div>  
   
   <br/>
-  <div>
-	  Select Gender:
-	  <input class="margin" type="radio" formControlName="gender" value="male"> Male
-	  <input class="margin" type="radio" formControlName="gender" value="female" > Female
-  </div>  
   
-  <br/>
+  
+  
+  
   <div formArrayName="users">
 	<div *ngFor="let user of users.controls; index as idx">
-	  PhoneNumber:<input class="margin" [formControlName]="idx" placeholder="Enter phone Number">
+	 <input mdbInput class="margin" [formControlName]="idx" placeholder="Enter phone Number">
     
 	  <button type="button" (click)="deleteUserField(idx)">Delete</button>
 	</div>
@@ -159,7 +166,9 @@
   </div>
 </form>
 <div>
-
+<div class="col s7">
+             
+          </div>
     </div>
         </div>
       </div>
